@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"math/rand"
-	"time"
 
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
@@ -23,7 +22,7 @@ func NewApp() *App {
 // so we can call the runtime methods
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
-	rand.Seed(time.Now().UnixNano())
+	// Note: In Go 1.20+, rand is automatically seeded
 }
 
 // Greet returns a greeting for the given name
