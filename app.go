@@ -58,3 +58,13 @@ func (a *App) GetRandomPosition() map[string]int {
 func (a *App) Quit() {
 	runtime.Quit(a.ctx)
 }
+
+// HideWindow hides the window
+func (a *App) HideWindow() {
+	runtime.WindowHide(a.ctx)
+}
+
+// ShowWindow shows the window
+func (a *App) ShowWindow() {
+	runtime.WindowShow(a.ctx)
+}

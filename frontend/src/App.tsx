@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Greet, MoveWindow, GetRandomPosition, Quit } from "../wailsjs/go/main/App";
+import Settings from './components/Settings';
 
 function App() {
     const [petState, setPetState] = useState<'idle' | 'walking' | 'dragging'>('idle');
     const [message, setMessage] = useState('');
     const [showMenu, setShowMenu] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
     const petRef = useRef<HTMLDivElement>(null);
 
     // Random movement
@@ -94,6 +96,12 @@ function App() {
                         }}>
                             🚀 随机移动
                         </div>
+                        <div className="menu-item" onClick={() => {
+                            setShowMenu(false);
+                            setShowSettings(true);
+                        }}>
+                            ⚙️ 设置
+                        </div>
                         <div className="menu-divider"></div>
                         <div className="menu-item quit" onClick={handleQuit}>
                             ❌ 退出
@@ -101,6 +109,11 @@ function App() {
                     </div>
                 )}
             </div>
+
+            {/* Settings panel */}
+            {showSettings && (
+                <Settings onClose={() => setShowSettings(false)} />
+            )}
         </div>
     );
 }

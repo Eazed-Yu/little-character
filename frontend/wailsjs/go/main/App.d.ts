@@ -7,6 +7,10 @@ export function GetScreenSize():Promise<Record<string, number>>;
 
 export function Greet(arg1:string):Promise<string>;
 
+export function HideWindow():Promise<void>;
+
 export function MoveWindow(arg1:number,arg2:number):Promise<void>;
 
 export function Quit():Promise<void>;
+
+export function ShowWindow():Promise<void>;

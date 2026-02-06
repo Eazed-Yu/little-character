@@ -31,6 +31,7 @@ func main() {
 		Frameless:        true,  // No window frame
 		AlwaysOnTop:      true,  // Always on top
 		StartHidden:      false, // Start visible
+		Menu:             nil,   // No menu bar
 		Bind: []interface{}{
 			app,
 		},
@@ -42,6 +43,14 @@ func main() {
 		Mac: &mac.Options{
 			WebviewIsTransparent: true,
 			WindowIsTranslucent:  true,
+			TitleBar: &mac.TitleBar{
+				TitlebarAppearsTransparent: true,
+				HideTitle:                  true,
+				HideTitleBar:               true,
+				FullSizeContent:            true,
+				UseToolbar:                 false,
+				HideToolbarSeparator:       true,
+			},
 		},
 		Linux: &linux.Options{
 			WindowIsTranslucent: true,
