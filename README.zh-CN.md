@@ -2,6 +2,8 @@
 
 基于 Wails 技术开发的桌面宠物应用，支持透明窗口、Live2D 动画和交互功能。
 
+**📖 [快速入门](QUICKSTART.md)** | [English Documentation](README.md)
+
 ## ✨ 特性
 
 - 🪟 **透明无边框窗口** - 宠物可以自由浮动在桌面上

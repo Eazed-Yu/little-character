@@ -2,7 +2,7 @@
 
 A desktop pet application built with Wails, featuring transparent windows, Live2D animations, and interactive features.
 
-[中文文档](README.zh-CN.md)
+**📖 [Quick Start Guide](QUICKSTART.md)** | [中文文档](README.zh-CN.md)
 
 ## ✨ Features
 
