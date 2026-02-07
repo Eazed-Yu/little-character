@@ -1,0 +1,39 @@
+html {
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: move;
+    -webkit-app-region: drag;
+}
+
+* {
+    box-sizing: border-box;
+}
